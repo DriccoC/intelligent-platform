@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f4f4f5;
+  color: #1f2937;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #1f2937;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header p {
+  opacity: 0.8;
+  margin-top: 0.25rem;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  max-width: 480px;
+  text-align: center;
+}
+
+.card h2 {
+  margin-bottom: 0.75rem;
+}
+
+.rainbow-text {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(
+    90deg,
+    #ff0000, #ff7f00, #ffff00, #00ff00,
+    #00ffff, #0000ff, #8b00ff, #ff0000
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: slide-rainbow 4s linear infinite;
+}
+
+@keyframes slide-rainbow {
+  from { background-position: 0% 50%; }
+  to { background-position: 300% 50%; }
+}
+
+.letter-rainbow {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.letter-rainbow span {
+  display: inline-block;
+  animation: bounce-letter 1.2s ease-in-out infinite;
+}
+
+.letter-rainbow span:nth-child(7n+1) { color: #ff0000; animation-delay: 0s; }
+.letter-rainbow span:nth-child(7n+2) { color: #ff7f00; animation-delay: 0.1s; }
+.letter-rainbow span:nth-child(7n+3) { color: #ffcc00; animation-delay: 0.2s; }
+.letter-rainbow span:nth-child(7n+4) { color: #00aa00; animation-delay: 0.3s; }
+.letter-rainbow span:nth-child(7n+5) { color: #0088ff; animation-delay: 0.4s; }
+.letter-rainbow span:nth-child(7n+6) { color: #4b0082; animation-delay: 0.5s; }
+.letter-rainbow span:nth-child(7n+7) { color: #aa00ff; animation-delay: 0.6s; }
+
+@keyframes bounce-letter {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
